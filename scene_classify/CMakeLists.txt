@@ -9,12 +9,14 @@ endif()
 project(DeepvacCLS)
 
 set(CMAKE_BUILD_TYPE "RELEASE")
-set(CMAKE_CXX_FLAGS "-std=c++11 -O3")
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 file(GLOB CLS_SRC src/*.cpp)
 file(GLOB CLS_HEADERS include/*.h)
 
 add_library(DeepvacCLS STATIC ${CLS_SRC})
+
+target_include_directories(DeepvacCLS PUBLIC 
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/..>
+)
 
