@@ -1,7 +1,3 @@
-//
-// Created by liubaojia on 20-3-21.
-//
-
 #pragma once
 
 #include "ncnn/net.h"
@@ -9,7 +5,6 @@
 
 class AudioEmotionDetect {
 public:
-
     AudioEmotionDetect(const char* model_path);
     AudioEmotionDetect(const char* paramPath, const char* binPath);
     ~AudioEmotionDetect();

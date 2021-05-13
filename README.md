@@ -7,5 +7,4 @@ ncnn examples on mobile platform
 
 ### 准备
 
-1. 在根目录下面创建libs文件夹及libs/arm64-v8a和libs/armeabi-v7a文件夹。
-2. 将ncnn库放到对应文件夹下面。
+1. 将ncnn库文件放到libs相应文件夹下面
