@@ -6,17 +6,16 @@ else()
   cmake_policy(VERSION 3.11)
 endif()
 
-project(DeepvacCLS)
+project(DeepvacAudioEmotion)
 
 set(CMAKE_BUILD_TYPE "RELEASE")
 
-file(GLOB CLS_SRC src/*.cpp)
-file(GLOB CLS_HEADERS include/*.h)
+file(GLOB AE_SRC src/*.cpp)
+file(GLOB AE_HEADERS include/*.h)
 
-add_library(DeepvacCLS STATIC ${CLS_SRC})
+add_library(DeepvacAudioEmotion STATIC ${AE_SRC})
 
-target_include_directories(DeepvacCLS PUBLIC 
+target_include_directories(DeepvacAudioEmotion PUBLIC 
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/..>
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/../..>
 )
-
