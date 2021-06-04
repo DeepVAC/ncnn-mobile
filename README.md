@@ -1,5 +1,5 @@
 # ncnn-mobile
-ncnn examples on mobile platform
+platform independent NCNN functions on mobile platform(Android, ios, Arm Linux...)
 
 ### 下载ncnn库
 
